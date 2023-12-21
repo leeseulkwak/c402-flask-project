@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGV 영화 순위</title>
+</head>
+<body>
+    <h1>CGV 영화 순위</h1>
+    <div id="movieRank">
+        <!-- 영화 순위를 동적으로 추가할 부분 -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("http://www.cgv.co.kr/movies/", function(data) {
+                var movieRank = $(data).find("div.sect-movie-chart");
+                $(movieRank).find("li").each(function(index, element) {
+                    var title = $(element).find("strong.title").text();
+                    var imgSrc = $(element).find("span.thumb-image > img").attr("src");
+                    var reservationLink = "http://www.cgv.co.kr" + $(element).find("a.link-reservation").attr("href");
+
+                    var movieInfo = "<div><h2>" + (index + 1) + "위: " + title + "</h2>" +
+                                    "<img src='" + imgSrc + "' alt='" + title + "'>" +
+                                    "<p><a href='" + reservationLink + "'>예매하기</a></p></div>";
+
+                    $("#movieRank").append(movieInfo);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

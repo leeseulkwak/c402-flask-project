@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Window</title>
+    <style>
+        #chatWindow {
+            width: 400px;
+            height: 500px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+        #messageInput {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatWindow">
+        <!-- 채팅 메세지가 출력될 공간 -->
+    </div>
+    <input id="messageInput" type="text" placeholder="메세지를 입력하세요">
+    <button onclick="sendMessage()">전송</button>
+
+    <script>
+        function sendMessage() {
+            var chatWindow = document.getElementById('chatWindow');
+            var messageInput = document.getElementById('messageInput');
+            
+            // 입력한 메세지가 비어있지 않다면 채팅창에 메세지 출력
+            if(messageInput.value != '') {
+                chatWindow.innerHTML += '<p>' + messageInput.value + '</p>';
+                // 입력창 초기화
+                messageInput.value = '';
+                // 채팅창 최하단으로 스크롤
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

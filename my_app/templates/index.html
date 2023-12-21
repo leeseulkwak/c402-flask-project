@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+</body>
+</html>
+<!-- Header -->
+<header class="w3-container w3-white w3-center" style="padding:128px 16px; margin-bottom: 40px;">
+    <h1 class="w3-margin w3-jumbo">영화예매사이트</h1>
+    {% if g.user%}
+    <button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="redirectToChatbot()">챗봇예매하기</button>
+
+    <script>
+        function redirectToChatbot() {
+            window.location.href = "{{ url_for('chatbot.chatbot') }}";
+        }
+    </script>
+    {%else%}
+    <button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="showLoginPopup()">챗봇예매하기</button>
+
+    <script>
+    function showLoginPopup() {
+      alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+      window.location.href = "{{ url_for('auth.login') }}";
+    }
+    </script>
+    {%endif%}
+    </header>
+
+<body>
+    {% include 'movie_rank.html' %}
+</body>
+{% endblock %}

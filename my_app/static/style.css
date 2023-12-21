@@ -1,0 +1,76 @@
+html,
+body {
+    height: 100%;
+}
+
+.row>.col,
+.row>.col-sm-6 {
+    padding: 50px 50px;
+
+}
+
+.right-align {
+    text-align: bottom;
+}
+
+.chatbot-box,
+.chatbot-box .row {
+    height: 100%;
+}
+
+.chatbot-box .about {
+
+    background-repeat: no-repeat;
+    /* 이미지 반복 방지 */
+    background-position: top;
+    /* 이미지 위치 설정: 왼쪽 아래 */
+    background-size: auto;
+    background-color: white;
+    height: 50%;
+}
+
+.message {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.incoming-message {
+    background-color: lightgray;
+    border-radius: 0 30px 30px 30px;
+}
+
+.outgoing-message {
+    background-color: #2c7a52;
+    color: white;
+    border-radius: 30px 30px 0 30px;
+}
+
+#submitButton {
+    font-weight: bold;
+    background-color: #2c7a52;
+    color: white;
+}
+
+#chatbotbutton{
+    font-weight: bold;
+    background-color: #2c7a52;
+    color: white;
+}
+
+.form{
+    margin-top: auto;
+}
+
+.container my-3{
+    margin-top: auto;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie_image {
+    max-width: 100%;
+    height: auto;
+}

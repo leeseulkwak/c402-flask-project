@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-3">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <title>Document</title>
+  </head>
+  <body>
+      <!--성/이름 디비연동 화면-->
+      <hr>
+      <div class="container" style="margin-top: 80px;">
+        <h5 class="my-3 border-bottom pb-2">회원정보폼</h5>
+      <form action="/view" method="post"  class="my-3" >
+          <label for="firstname">First name:</label><br>
+          <input type="text" id="fname" name="firstname" value=""><br>
+          <label for="lastname">Last name:</label><br>
+          <input type="text" id="lname" name="lastname" value=""><br>
+        </div>
+          <!--셀렉 화면-->
+          <hr>
+        <div class="mb-3">
+          <br><tr>사용하는 차를 선택하세요!!!</tr><br>
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br>
+        </div>
+  
+          <!--라디오 버튼 화면-->
+          <hr>
+          <div class="mb-3">
+          <br><tr>좋아하는 언어를 선택하세요!!!</tr><br>
+          <br>
+          
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label><br>
+          </div>
+  
+                    <!--제출-->
+        <input type="submit" value="Submit" class="w3-button w3-green w3-padding-large w3-large w3-margin-top"><br>
+        </form>
+      </div>
+  </body>
+  </html>
+{% endblock %}

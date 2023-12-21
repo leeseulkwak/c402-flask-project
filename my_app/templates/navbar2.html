@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+  .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+  .fa-anchor,.fa-coffee {font-size:200px}
+  </style> -->
+</head>
+<body>
+{% if g.user%}
+<div class="w3-bar w3-green w3-card w3-left-align w3-large">
+  <a href="{{ url_for('main.index') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+  <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="{{ url_for('auth.logout') }}">{{g.user.username}}님 환영합니다.(로그아웃)</a>
+  <!-- <a href="{{ url_for('auth.form') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">회원정보폼</a> -->
+  <a href="{{ url_for('question._list') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">영화리뷰게시판</a>
+  </div>
+ <!-- Navbar -->
+{%else%}
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('main.index') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="{{ url_for('auth.signup') }}"  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">계정생성</a>
+    <a href="{{ url_for('auth.login') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">로그인</a>
+    <!-- <a href="{{ url_for('auth.form') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">회원정보폼</a> -->
+    <a href="{{ url_for('question._list') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">영화리뷰게시판</a>
+  </div>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+{%endif%}
+</body>
+</html>
