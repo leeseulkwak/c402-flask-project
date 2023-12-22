@@ -35,7 +35,7 @@ body {
 }
 
 .incoming-message {
-    background-color: lightgray;
+    background-color: rgb(249, 249, 249);
     border-radius: 0 30px 30px 30px;
 }
 
@@ -74,3 +74,22 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+/* mouse over link */
+a {
+    background-color: yellow;
+    color:black;
+  }
+/* .link-1 {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+.link-1 {
+    background-color: red;
+    color: white;
+  } */

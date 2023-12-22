@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import webbrowser
+import streamlit as st
 
 col_list = st.columns(3)
 

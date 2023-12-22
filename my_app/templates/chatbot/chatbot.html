@@ -31,13 +31,14 @@
          <div class="col"> 
           <div class="input-group input-group-lg"> 
             <input type="text" class="form-control" id="roomQuery" placeholder="영화제목을 입력해주세요!"> 
-            <button id="submitButton" class="input-group-text">영화예매하기</button> 
+            <button id="submitButton" class="input-group-text" onclick="resetText()">영화예매하기</button> 
           </div> 
         </div> 
       </div>
      </div> 
     </div> 
     <script src="{{url_for('static', filename='script.js')}}"></script> 
+  
   </body>
 </html>
 {% endblock %}

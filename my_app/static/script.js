@@ -72,3 +72,8 @@ function updateScroll() {
   });
 }
 
+//예매하기 누르면 인풋 텍스트 초기화
+function resetText() {
+  // input 요소의 값을 빈 문자열로 설정하여 초기화합니다.
+  document.getElementById("roomQuery").value = "";
+}

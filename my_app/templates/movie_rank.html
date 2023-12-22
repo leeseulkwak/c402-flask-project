@@ -26,18 +26,18 @@
 <td>
 <h2>1위: 서울의 봄</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg' alt='서울의 봄' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='comments.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="redirectToDetailPage()">상세정보</button>
 </td>
 <td>
 <h2>2위: 괴물</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87716/87716_320.jpg' alt='괴물' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top"  onclick="location.href='reviews.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top"  onclick="location.href='reviews.html'">상세정보</button>
 </td>
 </td>
 <td>
 <h2>3위: 말하고 싶은 비밀</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87867/87867_320.jpg' alt='말하고 싶은 비밀' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">상세정보</button>
 </td>
 </td>
 </tr>
@@ -45,22 +45,29 @@
 <td>
 <h2>4위: 3일의 휴가</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87594/87594_320.jpg' alt='3일의 휴가' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">상세정보</button>
 </td>
 </td>
 <td>
 <h2>5위: 듄</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg' alt='듄' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">상세정보</button>
 </td>
 </td>
 <td>
 <h2>6위: 뽀로로 극장판 슈퍼스타 대모험</h2>
 <img src='https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87453/87453_320.jpg' alt='뽀로로 극장판 슈퍼스타 대모험' class="movie_image"><br>
-<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">리뷰보기</button>
+<button class="w3-button w3-green w3-padding-large w3-large w3-margin-top" onclick="location.href='reviews.html'">상세정보</button>
 </td>
 </td>
 </tr>
 </table>
+
+<script>
+    function redirectToDetailPage() {
+      // 상세 정보 페이지로 이동하는 코드를 작성합니다.
+      window.location.href = "http://www.cgv.co.kr/movies/detail-view/?midx=87554";
+    }
+  </script>
 </body>
 </html>
