@@ -1,6 +1,9 @@
 
 ![image](https://github.com/leeseulkwak/c402-flask-project/assets/147569427/9ec735e0-c748-4612-b978-0c9fb8ca4da5)
 
+![image](https://github.com/leeseulkwak/c402-flask-project/assets/147569427/cd51d119-505a-488f-a4c1-a9802d020d7b)
+
+
 기술 : python, html, javascript, css, sqlgate
 간단 설명
 
